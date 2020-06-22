@@ -1,0 +1,43 @@
+import random
+lst=["snake","water","gun"]
+a=0
+comp=0
+i=1
+print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWelcome to the Snake-Water-Gun game!!!")
+print("You can play maximum of 10times")
+while(i<=10):
+    i=i+1
+    ch=input("Press s for Snake,w for Water and g for Gun:-\n")
+    choice=random.choice(lst)
+    if ch=="s" and choice=="water":
+        print("You Won!! and you got a point")
+        a=a+1
+        continue
+    elif ch=="w" and choice=="snake":
+        print("You Loss!! and computer got a point")
+        comp=comp+1
+        continue
+    elif ch=="g" and choice=="snake":
+        print("You Won!! and you got a point")
+        a=a+1
+        continue
+    elif ch=="g" and choice=="water":
+        print("You Loss!! and computer got a point")
+        comp=comp+1
+        continue
+    elif ch=="w" and choice=="gun":
+        print("You Won!! and you got the point")
+        a=a+1
+        continue
+    elif ch=="s" and choice=="gun":
+        print("You Loss!! and computer got the point")
+        comp=comp+1
+        continue
+    else:
+        print("Similar Selection")
+        print("Tie")
+        continue
+if(a>comp):
+    print("I am the Winner and won the match",a,"times.")
+else:
+    print("Ohhoo!!! You Loss and Computer is the Winner and won the match",comp,"times.")
